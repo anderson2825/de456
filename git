@@ -1,0 +1,36 @@
+[33mcommit 6a3b3a65bb2de9645076f0b420f90925e9ed0e56[m
+Author: anderson <deveil2825@163.com>
+Date:   Mon Mar 27 14:12:16 2017 +0800
+
+    text12312
+
+[1mdiff --git a/addtest.txt b/addtest.txt[m
+[1mindex 99db014..ec8930d 100644[m
+[1m--- a/addtest.txt[m
+[1m+++ b/addtest.txt[m
+[36m@@ -1 +1,22 @@[m
+[31m-dfadf[m
+\ No newline at end of file[m
+[32m+[m[32mdfadf[m
+[32m+[m[32mhello world[m
+[32m+[m
+[32m+[m[32m1.´´½¨git×ÊÔ´¿â[m
+[32m+[m[32m    git init --bare ¿âÃû³Æ[m
+[32m+[m
+[32m+[m[32m2.ÔÚÓÃ»§ÎÄ¼ş¼ĞÏÂ°Ñ×ÊÔ´cloneÏÂÀ´[m
+[32m+[m[32m    git clone <²Ö¿âµØÖ·»òÄ¿Â¼> /d/software/respository/<²Ö¿âÃû> <ÓÃ»§Ä¿Â¼>[m
+[32m+[m
+[32m+[m[32m3.´´½¨Ò»¸öÎÄ¼ş£¬ÄÉÈëµ½°æ±¾¿ØÖÆÖĞ¡£[m
+[32m+[m[32m    git add <ÎÄ¼şÃû>[m
+[32m+[m
+[32m+[m[32m4.Ìá½»µ½±¾µØ°æ±¾¿âÖĞ¡£[m
+[32m+[m[32m git commit <ÎÄ¼şÃû>[m
+[32m+[m
+[32m+[m[32m5 ÍÆËÍµ½Ô¶³Ì¹²Ïí¿âÖĞ[m
+[32m+[m[32m   git push origin master[m
+[32m+[m
+[32m+[m[32m6.ÇĞ»»Ä¿Â¼(ĞÂÓÃ»§)£¬»ñÈ¡×îĞÂµÄÎÄ¼ş¡£[m
+[32m+[m[32m   git pull[m
+[32m+[m[32m7.²é¿´git²Ö¿âÖĞ¸÷ÎÄ¼şµÄµ±Ç°×´Ì¬[m
+[32m+[m[32mgit status[m
+\ No newline at end of file[m
