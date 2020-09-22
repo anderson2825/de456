@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        
+        li {
+            list-style: none
+        }
+        
+        a {
+            text-decoration: none
+        }
+        
+        .bgc0 {
+            background-color: #d7e4f1;
+            padding-bottom: 1%;
+            border-radius: 10px;
+            margin-bottom: 2.5%;
+            margin-top: 2.5%
+        }
+        
+        .w1200 {
+            max-width: 1200px;
+            margin: 0 auto
+        }
+        
+        .t1 {
+            font-size: 30px;
+            margin-top: .77%;
+            font-weight: 600;
+            text-align: center;
+            position: relative
+        }
+        
+        .t1 span {
+            vertical-align: middle;
+            z-index: 2;
+            font-weight: 700;
+            color: #033d99;
+            line-height: 2.667em;
+            min-width: 10em;
+            box-sizing: border-box;
+            display: inline-block;
+            position: relative
+        }
+        
+        .tabsOvs {
+            max-width: 1048px;
+            margin: 0 auto 20px auto
+        }
+        
+        .tabs {
+            font-size: 0;
+            text-align: center;
+            position: relative
+        }
+        
+        .tabs span.active {
+            background-color: #3971d9
+        }
+        
+        .tabs span {
+            height: 3em;
+            line-height: 3em;
+            background-color: #30b3e6;
+            margin-right: .4em;
+            margin-bottom: .4em;
+            color: #fff;
+            font-size: 20px;
+            border-radius: .3em;
+            cursor: pointer;
+            display: inline-block;
+            white-space: nowrap;
+            text-align: center;
+            text-overflow: ellipsis;
+            overflow: hidden
+        }
+        
+        .tabs.tabs2 span {
+            width: 49%;
+            margin-right: 2%
+        }
+        
+        .tabs.tabs3 span {
+            width: 32%;
+            margin-right: 1.998%
+        }
+        
+        .tabs.tabs4 span {
+            width: 24%;
+            margin-right: 1.28%
+        }
+        
+        .tabs.tabs5 span {
+            width: 19%;
+            margin-right: 1.2%
+        }
+        
+        .tabs.tabs2 span:nth-child(2n),
+        .tabs.tabs3 span:nth-child(3n),
+        .tabs.tabs4 span:nth-child(4n),
+        .tabs.tabs5 span:nth-child(5n) {
+            margin-right: 0
+        }
+        
+        .tabs span:hover {
+            opacity: .9
+        }
+        
+        .container {
+            overflow-x: hidden;
+            margin: 0 auto;
+            max-width: 1048px;
+            overflow: visible;
+            margin-bottom: 1.938%
+        }
+        
+        .box_box {
+            margin-left: 0;
+            display: none
+        }
+        
+        .fix:after {
+            content: '';
+            clear: both;
+            display: table
+        }
+        
+        .item42_box {
+            width: 25%;
+            float: left;
+            padding-right: 10px;
+            box-sizing: border-box;
+            padding-bottom: 10px
+        }
+        
+        .item42 {
+            padding: 6%;
+            background-color: #fff;
+            box-sizing: border-box;
+            font-size: 16px;
+            position: relative
+        }
+        
+        .item42 dt {
+            padding: 2% 0;
+            position: relative
+        }
+        
+        .item42 dt a {
+            padding-top: 100%;
+            background-position: center center;
+            background-size: contain;
+            width: 100%;
+            background-repeat: no-repeat;
+            display: block
+        }
+        
+        .item42 dt a:hover {
+            opacity: .9;
+            text-decoration: none
+        }
+        
+        .item42 .title {
+            height: 2.857em;
+            line-height: 1.428em;
+            font-size: .875em;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden
+        }
+        
+        .item42 .title a {
+            color: #4c4b4b
+        }
+        
+        .item42 .title a:hover {
+            color: #292929;
+            opacity: .8
+        }
+        
+        .item42 .money {
+            font-size: 1.5em;
+            margin-top: 4%;
+            margin-bottom: 4%;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #30b3e6;
+            text-align: center
+        }
+        
+        .item42 .money span {
+            display: block
+        }
+        
+        .item42 del {
+            font-size: 14px;
+            color: #a2a2a2;
+            font-weight: 400;
+            margin-top: 1%
+        }
+        
+        .item42 .buy {
+            margin-top: 4.5%;
+            display: -webkit-box;
+            display: flex
+        }
+        
+        .item42 .buy a {
+            line-height: 2em;
+            height: 2em;
+            font-size: 1.25em;
+            color: #fff
+        }
+        
+        .item42 .buy a:hover {
+            opacity: .9
+        }
+        
+        .item42 .buy .go {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            text-align: center;
+            background-color: #30b3e6;
+            border-radius: 4px;
+            text-transform: uppercase
+        }
+        
+        .item42 .buy .carI {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 2em;
+            flex: 0 0 2em;
+            position: relative;
+            margin-right: 1em
+        }
+        
+        .item42 .barBox {
+            height: 9px;
+            background-color: #d4d4d4;
+            border-radius: 99em;
+            width: 100%;
+            overflow: hidden
+        }
+        
+        .item42 .bar {
+            height: 9px;
+            border-radius: 99em;
+            background-color: #30b3e6
+        }
+        
+        .item42 .pcsB {
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto
+        }
+        
+        .item42 .pcsB del {
+            float: right;
+            font-size: .875em
+        }
+        
+        .item42 .pcs {
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.6667em;
+            border-radius: 2px;
+            color: #333;
+            display: inline-block;
+            position: relative
+        }
+        
+        .item42 .pcs span {
+            color: #30b3e6
+        }
+        
+        .item42 .off {
+            font-size: .875em;
+            width: 3.143em;
+            height: 3.143em;
+            line-height: 3.143em;
+            background-color: #30b3e6;
+            border-radius: 999px;
+            position: absolute;
+            right: .575em;
+            color: #fff;
+            text-align: center;
+            top: .3889em;
+            z-index: 1
+        }
+        
+        .item42 .off span {
+            vertical-align: middle;
+            line-height: 1;
+            display: inline-block
+        }
+        
+        .item42 .time {
+            font-size: 12px;
+            background-color: #333;
+            color: #fff;
+            line-height: 1.4;
+            box-sizing: border-box;
+            width: 100%;
+            padding-top: .6667em;
+            padding-bottom: .6667em
+        }
+        
+        .item42.notop {
+            padding-top: 0
+        }
+        
+        .item42.notop .off {
+            top: .3889em
+        }
+        
+        .item42 .shipT {
+            color: #fff;
+            font-size: 12px;
+            padding: .5em .8em;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            border-top-right-radius: 999px;
+            min-width: 9.833em;
+            box-sizing: border-box;
+            text-align: left;
+            background: #30b3e6
+        }
+        
+        .item42 .shipT.shipHide {
+            display: none
+        }
+        
+        @media (max-width:1024px) {
+            .t1 span {
+                font-size: 20px;
+                font-size: calc(125% + 16 * (100vw - 320px)/ 704);
+                font-size: calc(20px + 16 * (100vw - 320px)/ 704)
+            }
+            .tabs {
+                padding: 0 1%
+            }
+            .tabs span {
+                font-size: .875rem
+            }
+            .container {
+                padding: 0 1%
+            }
+            .box_box {
+                margin-right: 0
+            }
+            .item42_box {
+                width: 49%;
+                margin-right: 2%;
+                padding-right: 0
+            }
+            .item42_box:nth-child(even) {
+                margin-right: 0
+            }
+        }
+    </style>
+    <script>
+        function reSize() {
+            top.resizeIframe("p-c-1308318136485101568")
+        }
+        (function() {
+            var openDataJsonStr = `{
+  "Request": {
+    "API": {
+      "Server": "https://open.geekbuying.com/openapi/v1/products"
+    }
+  },
+  "Tabs": {
+    "Tab1": {
+      "BannerId": "10152",
+      "Title": "test"
+    },
+    "Tab2": {
+      "BannerId": "9719",
+      "Title": "test2"
+    },
+    "Tab3": {
+      "BannerId": "10143",
+      "Title": "test3"
+    },
+    "Tab4": {},
+    "Tab5": {},
+    "Tab6": {}
+  },
+  "Title": {}
+}`;
+            var openStyleJsonStr = `{
+  "Background": {
+    "Color": "",
+    "Hide": false
+  },
+  "BuyNowButton": {
+    "ButtonColor": "",
+    "FontColor": "",
+    "FontSize": "18px"
+  },
+  "DiscountRate": {
+    "Color": "",
+    "FontSize": "14px",
+    "Hide": false
+  },
+  "Margin": {
+    "Bottom": "80px"
+  },
+  "PlatformPrice": {
+    "Color": "",
+    "FontSize": "14px",
+    "Hide": false
+  },
+  "ProductName": {
+    "Color": "",
+    "FontSize": "14px"
+  },
+  "SalePrice": {
+    "Color": "",
+    "FontSize": "24px"
+  },
+  "ShoppingCart": {},
+  "Stock": {
+    "Color": "",
+    "FontSize": "13px",
+    "Hide": false
+  },
+  "Tabs": {
+    "FontColor": "",
+    "FontSize": "20px",
+    "RowThreshold": 4.0,
+    "TabColor1": "",
+    "TabColor2": ""
+  },
+  "Title": {
+    "FontSize": "40px"
+  },
+  "WareHouse": {}
+}`;
+            window.openData = openDataJsonStr && JSON.parse(openDataJsonStr);
+            window.openStyle = openStyleJsonStr && JSON.parse(openStyleJsonStr);
+        })();
+    </script>
+    <script>
+        var LocalCache = function() {
+            this.Set = function(name, value) {
+                var timestamp = Date.parse(new Date());
+                localStorage.setItem(name, '{"Expire":' + timestamp + ',"Value":' + value + '}')
+            };
+            this.Get = function(name, cacheInSeconds) {
+                var item = localStorage.getItem(name);
+                if (!item) {
+                    return ""
+                }
+                var entry = JSON.parse(item);
+                var expire = entry.Expire;
+                var timestamp = Date.parse(new Date());
+                if (timestamp - expire < cacheInSeconds * 1000) {
+                    return entry.Value
+                }
+                return ""
+            }
+        };
+        var TokenManager = function(options) {
+            this.AppKey = options.AppKey;
+            this.AppSecret = options.AppSecret;
+            this.AuthServer = options.AuthServer;
+            this.CacheKey = "gkb.open.token";
+            this.LocalCache = new LocalCache();
+            this.CacheInSeconds = 3600
+        };
+        TokenManager.prototype.DoGetAccessToken = function(onStateChanged) {
+            var it = this;
+            var tokenEndPoint = it.AuthServer.concat("/connect/token");
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("POST", tokenEndPoint, true);
+            xmlHttp.withCredentials = true;
+            xmlHttp.setRequestHeader("GK-SDK", "javascript-gkopensdk/1.0.0");
+            xmlHttp.setRequestHeader("Authorization", "Basic " + btoa(it.AppKey + ":" + it.AppSecret));
+            xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlHttp.send("grant_type=client_credentials");
+            xmlHttp.onreadystatechange = function() {
+                if (onStateChanged) {
+                    onStateChanged(xmlHttp)
+                }
+            }
+        };
+        TokenManager.prototype.GetAccessToken = function(callback) {
+            var it = this;
+            var token = it.LocalCache.Get(it.CacheKey, it.CacheInSeconds);
+            if (token) {
+                if (callback) {
+                    callback(token)
+                }
+                return
+            }
+            it.DoGetAccessToken(function(xmlHttp) {
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                    it.LocalCache.Set(it.CacheKey, xmlHttp.responseText);
+                    if (callback) {
+                        callback(JSON.parse(xmlHttp.responseText))
+                    }
+                }
+            })
+        };
+        TokenManager.prototype.RefreshAccessToken = function(callback) {
+            var it = this;
+            it.DoGetAccessToken(function(xmlHttp) {
+                if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                    it.LocalCache.Set(it.CacheKey, xmlHttp.responseText);
+                    if (callback) {
+                        callback(JSON.parse(xmlHttp.responseText))
+                    }
+                }
+            })
+        };
+        var GkOpenApiClient = function(options) {
+            this.OpenApiServer = options.OpenApiServer;
+            this.AppKey = options.AppKey;
+            this.AppSecret = options.AppSecret;
+            this.AuthServer = options.AuthServer;
+            this.LocalCache = new LocalCache();
+            this.CacheInSeconds = 5
+        };
+        GkOpenApiClient.prototype.DoGet = function(url, token, onStateChanged) {
+            var getEndPoint = this.OpenApiServer.concat(url);
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", getEndPoint, true);
+            xmlHttp.withCredentials = true;
+            xmlHttp.setRequestHeader("GK-SDK", "javascript-gkopensdk/1.0.0");
+            xmlHttp.setRequestHeader("Authorization", "Bearer " + token.access_token);
+            xmlHttp.send(null);
+            xmlHttp.onreadystatechange = function() {
+                if (onStateChanged) {
+                    onStateChanged(xmlHttp)
+                }
+            }
+        };
+        GkOpenApiClient.prototype.Get = function(url, callback) {
+            var it = this;
+            it.Callback = callback;
+            var data = it.LocalCache.Get(url, it.CacheInSeconds);
+            if (data) {
+                it.Callback(data);
+                return
+            };
+            var options = {
+                AppKey: it.AppKey,
+                AppSecret: it.AppSecret,
+                AuthServer: it.AuthServer
+            };
+            var tokenManager = new TokenManager(options);
+            tokenManager.GetAccessToken(function(token) {
+                it.DoGet(url, token, function(xmlHttp) {
+                    if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                        it.LocalCache.Set(url, xmlHttp.responseText);
+                        it.Callback(JSON.parse(xmlHttp.responseText))
+                    } else if (xmlHttp.readyState === 4 && xmlHttp.status === 401) {
+                        tokenManager.RefreshAccessToken(function(token1) {
+                            it.DoGet(url, token1, function(xmlHttp) {
+                                if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+                                    it.LocalCache.Set(url, xmlHttp.responseText);
+                                    it.Callback(JSON.parse(xmlHttp.responseText))
+                                }
+                            })
+                        })
+                    }
+                })
+            })
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body style=" border:0;margin:0">
+    <div class="w1200">
+        <div class="bgc0">
+            <div class="t1 target"><span></span></div>
+            <div class="tabsOvs">
+                <div class="tabs"><span class="tabs_title">$title$</span></div>
+            </div>
+            <div class="container">
+                <ul class="box_box fix">
+                    <li class="item42_box item4Sold">
+                        <dl class="item42 notop "><dt><a href="$targetLink$"target="_blank"style="$imagePath$"></a>$warehouseName$</dt>
+                            <dd class="title"><a href="$targetLink$" target="_blank" title="$productionName$">$productionName$</a></dd>
+                            <dd class="money"><span>$pcPromotionPrice$</span></dd>
+                            <dd class="pcsB">
+                                <div class="pcs"><span>$availableStock$</span>pcs left</div>$platformPrice$</dd>
+                            <dd class="barBox">
+                                <div class="bar" style="$stockLeft$"></div>
+                            </dd>
+                            <dd class="buy"><a href="javascript:;" class="carI">$CarLogo$</a><a href="$targetLink$" target="_blank" class="go">Buy Now</a></dd>$discountOff$</dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const [bannerId, titles, channelData] = [
+            [],
+            [],
+            []
+        ];
+        const tabs = window.openData.Tabs;
+        const tabTitls = window.openData.Title;
+        const taboVs = document.querySelector('.tabs');
+        const bgc0 = document.querySelector('.bgc0');
+        const tabHead = document.querySelector('.t1');
+        const tabOvsHtml = taboVs.innerHTML;
+        const container = document.querySelector('.container');
+        const itemUl = container.innerHTML;
+        const itemLi0 = document.querySelector('.box_box').innerHTML;
+        const {
+            Background,
+            BuyNowButton,
+            DiscountRate,
+            PlatformPrice,
+            ProductName,
+            SalePrice,
+            Stock,
+            Tabs,
+            Title,
+            WareHouse,
+            ShoppingCart
+        } = window.openStyle;
+        const [backgroundHide, backgroundColors, BNBButtonColor, BNBFontColor, DiscountColor, DiscountHide, PlatformPriceColor, PlatformPriceHide, SalePriceColor, StockColor, StockHide, TabsFontColor, TabsRowThreshold, TabsTabColor1, TabsTabColor2, TitleColor, TitleFontSize, WareHouseColor, ShoppingCartColor] = [Background.Hide, Background.Color, BuyNowButton.ButtonColor, BuyNowButton.FontColor, DiscountRate.Color, DiscountRate.Hide, PlatformPrice.Color, PlatformPrice.Hide, SalePrice.Color, Stock.Color, Stock.Hide, Tabs.FontColor, Tabs.RowThreshold, Tabs.TabColor1, Tabs.TabColor2, Title.Color, Title.FontSize, WareHouse.Color, ShoppingCart.Color];
+        let Bgc0Style = '',
+            BuyNowBgStyle = '',
+            DiscountRateStyle = '',
+            PlatformPriceStyle = '',
+            SalePriceStyle = '',
+            StockStyle = '',
+            TabsStyle = '',
+            TitleStyle = '',
+            WareHouseStyle = '',
+            BuyNowFtStyle = '';
+        if (backgroundHide == false && backgroundColors != '') {
+            Bgc0Style = '.bgc0{background-color:' + backgroundColors + '}'
+        } else if (backgroundHide == true) {
+            Bgc0Style = '.bgc0{ background:none}'
+        }
+        if (BNBButtonColor != '') {
+            BuyNowBgStyle = '.item42 .buy .go{background-color:' + BNBButtonColor + '}'
+        } else if (BNBFontColor != '') {
+            BuyNowFtStyle = '.item42 .buy a{color:' + BNBFontColor + '}'
+        }
+        if (DiscountHide == false && DiscountColor != "") {
+            DiscountRateStyle = '.item42 .off{background-color:' + DiscountColor + '}'
+        } else if (DiscountHide == true) {
+            DiscountRateStyle = '.item42 .off{ display:none}'
+        }
+        if (PlatformPriceHide == false && PlatformPriceColor != "") {
+            PlatformPriceStyle = '.item42 del{color:' + PlatformPriceColor + '}'
+        } else if (PlatformPriceHide == true) {
+            PlatformPriceStyle = '.item42 del{ display:none}'
+        }
+        if (SalePriceColor != "") {
+            SalePriceStyle = '.item42 .money{color:' + SalePriceColor + '}'
+        }
+        if (StockHide == false && StockColor != '') {
+            StockStyle = '.item42 .pcs span{color:' + StockColor + '} .item42 .bar{background-color:' + StockColor + '}'
+        } else if (StockHide == true) {
+            StockStyle = '.item42 .barBox,.item42 .pcs{display:none}'
+        }
+        if (TabsFontColor != "" || TabsTabColor1 != '' || TabsTabColor2 != '') {
+            TabsStyle = '.tabs span{color:' + TabsFontColor + ';background-color:' + TabsTabColor1 + '} .tabs span.active{background-color:' + TabsTabColor2 + '}'
+        }
+        if (TitleColor != "") {
+            TitleStyle = '.t1 span{color:' + TitleColor + '}'
+        }
+        if (WareHouseColor != "") {
+            WareHouseStyle = '.item42 .shipT {background: ' + WareHouseColor + '}'
+        }
+
+        function loadStyleString(css) {
+            const style = document.createElement("style");
+            style.type = "text/css";
+            try {
+                style.appendChild(document.createTextNode(css))
+            } catch (error) {
+                style.styleSheet.cssText = css
+            }
+            const bodys = document.getElementsByTagName("body")[0];
+            bodys.appendChild(style)
+        }
+        loadStyleString('' + WareHouseStyle + Bgc0Style + BuyNowBgStyle + BuyNowFtStyle + DiscountRateStyle + PlatformPriceStyle + SalePriceStyle + StockStyle + TabsStyle + TitleStyle + '');
+        if (tabTitls.Name != "" && tabTitls.Name !== undefined) {
+            tabHead.innerHTML = '<span>' + tabTitls.Name + '</span>'
+        }
+        let tabHtml = '';
+        let ulHtml = '';
+        for (const key in tabs) {
+            if (tabs.hasOwnProperty(key)) {
+                const tab = tabs[key];
+                if (tab.BannerId !== null && tab.BannerId !== undefined) {
+                    bannerId.push(tab.BannerId)
+                }
+                if (tab.Title !== null && tab.Title !== undefined) {
+                    titles.push(tab.Title)
+                }
+            }
+        }
+        switch (titles.length) {
+            case 3:
+            case 6:
+                taboVs.classList.add('tabs3');
+                break;
+            case 4:
+            case 8:
+                taboVs.classList.add('tabs4');
+                break;
+            case 5:
+            case 9:
+            case 10:
+                taboVs.classList.add('tabs5');
+                break;
+            default:
+                taboVs.classList.add('tabs2');
+                break
+        }
+        for (let index = 0; index < titles.length; index++) {
+            const tabTitle = titles[index];
+            tabHtml += tabOvsHtml.replace(/\$\w+\$/gi, tabTitle);
+            ulHtml += itemUl
+        }
+        taboVs.innerHTML = tabHtml;
+        container.innerHTML = ulHtml;
+        const {
+            API
+        } = window.openData.Request;
+        let options = {
+            OpenApiServer: API.Server,
+            AppKey: 'pangu-key',
+            AppSecret: 'pangu-secret',
+            AuthServer: 'https://open.geekbuying.com'
+        };
+        let openApiClient = new GkOpenApiClient(options);
+        openApiClient.Get('?bannerId=' + bannerId[0], function(data) {
+            channelData[0] = true;
+            document.querySelectorAll('.tabs_title')[0].classList.add('active');
+            document.querySelectorAll('.box_box')[0].style.display = 'block';
+            setTemp(data, document.querySelectorAll(".box_box")[0], 0)
+        });
+        String.prototype.temp = function(obj) {
+            return this.replace(/\$\w+\$/gi, function(matchs) {
+                var returns = obj[matchs.replace(/\$/g, '')];
+                return (returns + '') == 'undefined' ? '' : returns
+            })
+        };
+
+        function objToggle(obj, objIndex, showObj) {
+            const objAll = document.querySelectorAll(obj);
+            for (let index = 0; index < objAll.length; index++) {
+                const objs = objAll[index];
+                if (showObj) {
+                    objs.style.display = 'none';
+                    if (objIndex == index) {
+                        objAll[index].style.display = 'block'
+                    }
+                } else {
+                    objs.classList.remove('active');
+                    if (objIndex == index) {
+                        objAll[index].classList.add('active')
+                    }
+                }
+            }
+        }
+
+        function setTemp(data, obj, index) {
+            let data0 = [...data];
+            let itemLi = obj.innerHTML;
+            let htmlList = '';
+            let geekUA = navigator.userAgent;
+            for (let i = 0; i < data0.length; i++) {
+                let dataIndex = data0[i];
+                if (dataIndex.imagePath !== null && dataIndex.imagePath !== undefined) {
+                    dataIndex.imagePath = 'background-image:url(' + dataIndex.imagePath + ')'
+                }
+                dataIndex.discountOff = '';
+                if (dataIndex.pcPromotionPrice !== null && dataIndex.pcPromotionPrice !== undefined && dataIndex.platformPrice > dataIndex.pcPromotionPrice) {
+                    const discountOff = ((dataIndex.platformPrice - dataIndex.pcPromotionPrice) / dataIndex.platformPrice * 100).toFixed();
+                    if (parseFloat(discountOff) > 0) {
+                        dataIndex.discountOff = '<dd class="off"><span>' + discountOff + '% OFF</span></dd>'
+                    }
+                }
+                dataIndex.CarLogo = '';
+                if (ShoppingCartColor == '' || ShoppingCartColor == undefined) {
+                    dataIndex.CarLogo = "<svg viewBox='0 0 204 204' xmlns='http://www.w3.org/2000/svg'width='204'height='204' style='position: absolute; width: 100%; height: 100%' class='svg1'><circle cx='102'cy='102'r='99' stroke='#30b3e6' stroke-width='6' fill='transparent'></circle></svg><svg class='svg2'viewBox='0 0 1024 1024'xmlns='http://www.w3.org/2000/svg'width='140'height='140'style='position: absolute; left: 19%; top: 22%; width: 60%; height: 60%'><path d='M995.107 233.75a36.61 36.61 0 0 0-29.036-14.321h-767L166.857 65.642c-3.534-16.927-18.463-29.07-35.785-29.07h-94.5C16.357 36.571 0 52.927 0 73.141s16.357 36.572 36.571 36.572h64.787l139.428 665.787c3.537 16.929 18.465 29.07 35.785 29.07H827.43C847.643 804.571 864 788.215 864 768s-16.357-36.571-36.571-36.571H306.286L283.32 621.714h594.393c16.536 0 31.037-11.106 35.321-27.106l88.357-329.143c2.965-10.964.608-22.715-6.285-31.715zM849.679 548.57H268l-53.606-256h704l-68.716 256zm-502.25 292.572c-50.429 0-91.429 41-91.429 91.428S297 1024 347.429 1024s91.428-41 91.428-91.429-41-91.428-91.428-91.428zm0 128c-20.179 0-36.572-16.393-36.572-36.572S327.25 896 347.43 896 384 912.393 384 932.571s-16.393 36.572-36.571 36.572zm402.285-128c-50.428 0-91.428 41-91.428 91.428s41 91.429 91.428 91.429 91.429-41 91.429-91.429-41-91.428-91.429-91.428zm0 128c-20.178 0-36.571-16.393-36.571-36.572S729.536 896 749.714 896s36.572 16.393 36.572 36.571-16.393 36.572-36.572 36.572z' fill='#30b3e6' ></path></svg>"
+                } else {
+                    dataIndex.CarLogo = "<svg viewBox='0 0 204 204' xmlns='http://www.w3.org/2000/svg' width='204'height='204' style='position: absolute; width: 100%; height: 100%' class='svg1'><circle cx='102'cy='102'r='99' stroke='" + ShoppingCartColor + "'  stroke-width='6' fill='transparent'></circle></svg><svg class='svg2'viewBox='0 0 1024 1024'xmlns='http://www.w3.org/2000/svg'width='140'height='140'style='position: absolute; left: 19%; top: 22%; width: 60%; height: 60%'><path d='M995.107 233.75a36.61 36.61 0 0 0-29.036-14.321h-767L166.857 65.642c-3.534-16.927-18.463-29.07-35.785-29.07h-94.5C16.357 36.571 0 52.927 0 73.141s16.357 36.572 36.571 36.572h64.787l139.428 665.787c3.537 16.929 18.465 29.07 35.785 29.07H827.43C847.643 804.571 864 788.215 864 768s-16.357-36.571-36.571-36.571H306.286L283.32 621.714h594.393c16.536 0 31.037-11.106 35.321-27.106l88.357-329.143c2.965-10.964.608-22.715-6.285-31.715zM849.679 548.57H268l-53.606-256h704l-68.716 256zm-502.25 292.572c-50.429 0-91.429 41-91.429 91.428S297 1024 347.429 1024s91.428-41 91.428-91.429-41-91.428-91.428-91.428zm0 128c-20.179 0-36.572-16.393-36.572-36.572S327.25 896 347.43 896 384 912.393 384 932.571s-16.393 36.572-36.571 36.572zm402.285-128c-50.428 0-91.428 41-91.428 91.428s41 91.429 91.428 91.429 91.429-41 91.429-91.429-41-91.428-91.429-91.428zm0 128c-20.178 0-36.571-16.393-36.571-36.572S729.536 896 749.714 896s36.572 16.393 36.572 36.571-16.393 36.572-36.572 36.572z' fill='" + ShoppingCartColor + "' ></path></svg>"
+                }
+                if (dataIndex.platformPrice !== null && dataIndex.platformPrice !== undefined) {
+                    const platformPriceStr = dataIndex.platformPrice.toFixed(2);
+                    if (platformPriceStr != dataIndex.pcPromotionPrice.toString()) {
+                        dataIndex.platformPrice = '<del>' + platformPriceStr + '</del>'
+                    } else {
+                        dataIndex.platformPrice = ''
+                    }
+                }
+                if (dataIndex.availableStock !== null && dataIndex.availableStock !== undefined && dataIndex.availableStock != 0) {
+                    const stockLefts = 'width:' + ((dataIndex.availableStock / 100) * 100).toString() + '%';
+                    if (dataIndex.availableStock > 100) {
+                        dataIndex.stockLeft = "width:100%"
+                    } else {
+                        dataIndex.stockLeft = stockLefts
+                    }
+                } else {
+                    dataIndex.stockLeft = 'width:0%'
+                }
+                if (geekUA.match(/GEEKBUY\+X_APP_Android/g) !== null) {
+                    dataIndex.pcPromotionPrice = Math.min(dataIndex.pcPromotionPrice, dataIndex.appPromotionPrice);
+                    dataIndex.targetLink = 'geekbuying://m.geekbuy.com/godetials?sku=' + dataIndex.productionId + ''
+                } else {
+                    dataIndex.pcPromotionPrice = dataIndex.pcPromotionPrice;
+                    dataIndex.targetLink = dataIndex.targetLink
+                }
+                let warehouseName = dataIndex.warehouseName;
+                if (dataIndex.warehouseName.match(/China|Hong Kong/ig) != null) {
+                    dataIndex.warehouseName = dataIndex.warehouseName.replace(dataIndex.warehouseName, '')
+                } else {
+                    if (dataIndex.warehouseName.match(/\-/ig) != null) {
+                        warehouseNameIndex = dataIndex.warehouseName.indexOf("-");
+                        dataIndex.warehouseName = '<div class="shipT">Ship from ' + dataIndex.warehouseName.substring(0, warehouseNameIndex) + '</div>'
+                    } else {
+                        dataIndex.warehouseName = '<div class="shipT">Ship from ' + dataIndex.warehouseName + '</div>'
+                    }
+                }
+                htmlList += itemLi.temp(dataIndex)
+            }
+            obj.innerHTML = htmlList;
+            objToggle(".box_box", index, true);
+            reSize()
+        }
+
+        function debounce(func, wait, immdiate) {
+            let timer;
+            return function() {
+                let context = this,
+                    args = arguments;
+                if (timer) clearTimeout(timer);
+                if (immdiate) {
+                    let callNow = !timer;
+                    timer = setTimeout(() => {
+                        timer = null
+                    }, wait);
+                    if (callNow) func.apply(context, args)
+                } else {
+                    timer = setTimeout(() => {
+                        func.apply
+                    }, wait)
+                }
+            }
+        }
+
+        function tabLiClick(index) {
+            objToggle(".tabs_title", index, false);
+            if (channelData[index] != true) {
+                let channleIndex = index;
+                let openApiClient = new GkOpenApiClient(options);
+                channelData[channleIndex] = true;
+                openApiClient.Get('?bannerId=' + bannerId[channleIndex], function(data) {
+                    setTemp(data, document.querySelectorAll(".box_box")[channleIndex], channleIndex)
+                })
+            } else {
+                objToggle(".box_box", index, true)
+            }
+            reSize()
+        }
+        for (let index = 0; index < taboVs.children.length; index++) {
+            let tabLi = taboVs.children[index];
+            tabLi.addEventListener("click", function() {
+                debounce(tabLiClick(index), 1000, false)
+            })
+        }
+    </script>
+</body>
+
+</html>
